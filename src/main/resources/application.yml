@@ -1,2 +1,6 @@
 server:
   port: 8880
+
+logging:
+  file:
+    name: /home/logs/jenkins-demo.log
