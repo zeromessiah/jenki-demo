@@ -5,10 +5,10 @@ FROM amazoncorretto:17.0.8-al2023
 WORKDIR /app
 
 # 将 jar 包添加到工作目录，比如 target/yuoj-backend-user-service-0.0.1-SNAPSHOT.jar
-ADD target/jenkins-demo-0.0.1-SNAPSHOT.jar .
+COPY target/jenkins-demo-0.0.1-SNAPSHOT.jar /app/
 
 # 暴露端口
 EXPOSE 8880
 
 # 启动命令
-ENTRYPOINT ["java","-jar","/app/target/jenkins-demo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/app/jenkins-demo-0.0.1-SNAPSHOT.jar"]
